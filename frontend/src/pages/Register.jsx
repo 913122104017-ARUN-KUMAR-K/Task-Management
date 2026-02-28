@@ -31,6 +31,7 @@ export default function Register() {
     }
   };
 return (
+  <h1 style="text-align: center;">Task Management</h1>
   <div className="register-container">
     <form className="register-form" onSubmit={handleSubmit}>
       <h2>Register</h2>
