@@ -31,6 +31,7 @@ export default function Login() {
   };
 
  return (
+   <div>
   <h1 style="text-align: center;">Task Management</h1>
   <div className="login-container">
     <form className="login-form" onSubmit={handleSubmit}>
@@ -59,5 +60,6 @@ export default function Login() {
       </p>
     </form>
   </div>
+     <div/>
 );
 }
