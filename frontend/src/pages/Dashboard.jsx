@@ -81,6 +81,7 @@ export default function Dashboard() {
   };
 
   return (
+    <div>
     <h1 style="text-align: center;">Task Management</h1>
     <div className="dashboard-container">
       <div className="dashboard-header">
@@ -165,5 +166,6 @@ export default function Dashboard() {
         ))}
       </div>
     </div>
+      <div/>
   );
 }
