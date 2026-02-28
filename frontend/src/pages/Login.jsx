@@ -31,8 +31,10 @@ export default function Login() {
   };
 
  return (
+  <h1 style="text-align: center;">Task Management</h1>
   <div className="login-container">
     <form className="login-form" onSubmit={handleSubmit}>
+      
       <h2>Login</h2>
 
       <input
