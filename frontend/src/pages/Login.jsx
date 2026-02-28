@@ -18,7 +18,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await API.post("/auth/login", form);
+      const res = await API.post("api/auth/login", form);
 
       localStorage.setItem("token", res.data.token);
 
@@ -32,7 +32,7 @@ export default function Login() {
 
  return (
    <div>
-  <h1 style="text-align: center;">Task Management</h1>
+  <h1 style={{ textAlign: "center" }}>Task Management</h1>
   <div className="login-container">
     <form className="login-form" onSubmit={handleSubmit}>
       
@@ -60,6 +60,6 @@ export default function Login() {
       </p>
     </form>
   </div>
-     <div/>
+     </div>
 );
 }

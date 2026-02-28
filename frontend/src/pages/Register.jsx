@@ -19,7 +19,7 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      const res = await API.post("/auth/register", form);
+      const res = await API.post("api/auth/register", form);
 
       localStorage.setItem("token", res.data.token);
 
@@ -32,7 +32,7 @@ export default function Register() {
   };
 return (
   <div>
-  <h1 style="text-align: center;">Task Management</h1>
+ <h1 style={{ textAlign: "center" }}>Task Management</h1>
   <div className="register-container">
     <form className="register-form" onSubmit={handleSubmit}>
       <h2>Register</h2>
@@ -58,6 +58,6 @@ return (
       <button type="submit">Register</button>
     </form>
   </div>
-    <div/>
+    </div>
 );
 }

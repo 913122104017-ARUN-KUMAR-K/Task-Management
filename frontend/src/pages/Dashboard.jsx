@@ -15,7 +15,7 @@ export default function Dashboard() {
   // 🔹 Get Tasks
   const getTasks = async () => {
     try {
-      const res = await API.get("/tasks");
+      const res = await API.get("api/tasks");
       setTasks(res.data);
     } catch (error) {
       console.log(error);
@@ -37,7 +37,7 @@ export default function Dashboard() {
 
     try {
       if (editingId) {
-        await API.put(`/tasks/${editingId}`, form);
+        await API.put(`api/tasks/${editingId}`, form);
         setEditingId(null);
       } else {
         await API.post("/tasks", form);
@@ -52,7 +52,7 @@ export default function Dashboard() {
 
   // 🔹 Delete
   const deleteTask = async (id) => {
-    await API.delete(`/tasks/${id}`);
+    await API.delete(`api/tasks/${id}`);
     getTasks();
   };
 
@@ -82,7 +82,7 @@ export default function Dashboard() {
 
   return (
     <div>
-    <h1 style="text-align: center;">Task Management</h1>
+    <h1 style={{ textAlign: "center" }}>Task Management</h1>
     <div className="dashboard-container">
       <div className="dashboard-header">
         <h2>Task Dashboard</h2>
@@ -166,6 +166,6 @@ export default function Dashboard() {
         ))}
       </div>
     </div>
-      <div/>
+      </div>
   );
 }
