@@ -31,6 +31,7 @@ export default function Register() {
     }
   };
 return (
+  <div>
   <h1 style="text-align: center;">Task Management</h1>
   <div className="register-container">
     <form className="register-form" onSubmit={handleSubmit}>
@@ -57,5 +58,6 @@ return (
       <button type="submit">Register</button>
     </form>
   </div>
+    <div/>
 );
 }
