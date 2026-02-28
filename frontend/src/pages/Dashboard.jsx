@@ -40,7 +40,7 @@ export default function Dashboard() {
         await API.put(`api/tasks/${editingId}`, form);
         setEditingId(null);
       } else {
-        await API.post("/tasks", form);
+        await API.post("api/tasks", form);
       }
 
       setForm({ Title: "", Description: "" });
@@ -70,7 +70,7 @@ export default function Dashboard() {
     const newStatus =
       task.Status === "Complete" ? "Not complete" : "Complete";
 
-    await API.put(`/tasks/${task._id}`, { Status: newStatus });
+    await API.put(`api/tasks/${task._id}`, { Status: newStatus });
     getTasks();
   };
 
